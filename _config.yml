@@ -1,0 +1,9 @@
+name: Pipeline
+
+
+markdown: redcarpet
+pygments: true
+
+permalink: pretty
+
+exclude: ['node_modules', 'Gruntfile.js', 'LICENSE', 'package.json', '*.iml', 'README.md']
