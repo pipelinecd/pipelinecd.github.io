@@ -1,6 +1,22 @@
+html {
+    background: url('/media/pipelinelabs-pattern00-trans.png') repeat #000000;
+}
+
 body {
     background-color: #FFCC00;
     color: #000000;
+}
+
+a {
+    color: #ff6633;
+}
+
+a:visited {
+    color: #cc9933;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #content {
@@ -87,9 +103,5 @@ footer {
     background: url('/media/pipelinelabs-pattern00-trans.png') repeat #000000;
     margin-top: 20px;
     min-height: 55px;
-}
-
-html {
-    background: url('/media/pipelinelabs-pattern00-trans.png') repeat #000000;
 }
 
