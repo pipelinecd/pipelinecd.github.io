@@ -4,32 +4,125 @@ title: Pipeline, open-source continuous delivery
 name: home
 ---
 
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="sr-only">Navbar example</h1>
+<div class="container-fluid">
+    <div id="index-banner" class="jumbotron">
+        <div class="container">
+            <h1 class="sr-only">Navbar example</h1>
 
-        <div class="row"></div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="media/pipeline-yellow.png"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="media/pipeline-yellow.png"/>
+                </div>
+                <div class="col-md-6">
+                    <blockquote id="index-slogan">
+                        <p>A free, open-source continuous delivery tool that's
+                            powerful enough for the enterprise, flexible enough
+                            for startups and simple to use for hobbyists
+                        </p>
+                    </blockquote>
+                </div>
             </div>
         </div>
-
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It
-            includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
     </div>
 </div>
 
 <div class="container">
-    <div id="home">
-        <h1>Blog Posts</h1>
-        <ul class="posts">
-            {% for post in site.posts %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+    <article>
+        <p>
+            The hardest part of applying Continuous Delivery (CD),
+            is the organizational change required to get it fully applied
+        </p>
+
+        <p>
+            In software development Continuous Integration is already
+            a standard practise, Continuous Delivery and Continuouse Deployment
+            are --technically-- just the final mile
+        </p>
+
+        <p>
+            In the Delivery and Deployment phases, activities like
+            User Acceptance Testing (UAT) and arranging/configuring
+            the deployment infrastructure are often long running,
+            and therefore release blocking
+        </p>
+        <p>
+            Using Pipeline, the whole software workflow from commit
+            till the consumer can use it, is handled on one place.
+            Making it seemingly clear what blocks the quick and
+            continuous delivery and deployment flow to the consumer
+        </p>
+        <p>
+            Blockings can then be discussed with the product owner and
+            stakeholders to be solved
+        </p>
+        <p>
+            Automation is key. Therefor Pipeline maintains everything
+            version-controlled. The pipeline workflow, all its external
+            dependencies, environment configuration, everything
+        </p>
+        <p>
+            Pipeline hooks into existing tools, as long as the tool has
+            a command-line interface (CLI) or and API, it can be used
+            in Pipeline
+        </p>
+        <p>
+            As the pipeline is user for the whole software workflow,
+            it has differen types of users:
+        </p>
+        <dl>
+            <dt>Developers</dt>
+            <dd>who want deep insight in build and automated test phases</dd>
+
+            <dt>Testers</dt>
+            <dd>who want to see versions they can pull, test and sign-off after
+            all automated tests already passed</dd>
+
+            <dt>The business</dt>
+            <dd>wants to deploy ready versions to the consumer</dd>
+
+            <dt>And the pipeline maintainer</dt>
+            <dd>wants to maintain the pipeline, experiment and test it
+            from one single place without interrupting others</dd>
+        </dl>
+        <p>
+            Different users with different requirements, therefore different
+            user interfaces (UI)
+        </p>
+    </article>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Sponsors</h2>
+
+            <div class="media">
+                <div class="pull-left">
+                    <a href="http://www.tricode.nl">
+                        <img
+                                src="http://www.tricode.nl/wp-content/themes/tricode/images/site/logo.png"/>
+                    </a>
+
+                    <div class="list-group">
+                        <a href="http://www.tricode.nl" class="list-group-item">tricode.nl</a>
+                        <a href="http://www.twitter.com/Tricode" class="list-group-item">@tricode</a>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <p>
+                        <a href="http://www.tricode.nl">Tricode</a> provides time and resources.
+                        Patrick gets 8 hours of the workweek to work on Pipeline, and
+                        Martin may do design work for Pipeline during the workdays. This
+                        while having the agreement that everything created for Pipeline
+                        is Open-Source and not owned by Tricode in any way.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Contributors</h2>
+            <ul>
+                <li><a href="">Patrick van Dissel</a> (Founder)</li>
+                <li><a href="http://www.linkedin.com/in/martinkov">Martin Kovachki</a> (design)</li>
+                <li><a href="http://www.andrewoberstar.com">Andrew Oberstar</a> (code)</li>
+            </ul>
+        </div>
     </div>
 </div>

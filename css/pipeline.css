@@ -1,0 +1,95 @@
+body {
+    background-color: #FFCC00;
+    color: #000000;
+}
+
+#content {
+    background-color: #F2F2F2;
+}
+
+.jumbotron .container, header .container {
+    width: 970px;
+}
+
+.container {
+    width: 750px;
+}
+
+.affix {
+    position: fixed;
+    width: 100%;
+}
+
+.affix-bottom {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+header.navbar.affix nav {
+    padding-left: 200px;
+}
+
+header.navbar.affix .navbar-brand {
+    /*color: transparent !important;*/
+    background: url('/media/pipeline-yellow.png') no-repeat top hsla(48, 100%, 50%, 0.3);
+    background-size: contain;
+    position: absolute;
+    float: left;
+    display: block;
+    width: 200px;
+    height: 75px;
+    padding: 0;
+
+    font-size: 32px;
+    /*color: #fff;*/
+    padding-left: 75px;
+    padding-top: 15px;
+}
+
+#index-banner {
+    background-color: #FFCC00;
+}
+
+#index-slogan {
+    background-color: #F2F2F2;
+}
+
+.navbar-nav a.fa {
+    font-size: 30px;
+    font-kerning: none;
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+a.github {
+    color: transparent !important;
+    background: url('/media/github.png') center no-repeat;
+}
+
+a.github:hover {
+    background: url('/media/github-hover.png') center no-repeat;
+}
+
+a.twitter {
+    color: transparent !important;
+    background: url('/media/twitter.png') center no-repeat;
+}
+
+a.twitter:hover {
+    background: url('/media/twitter-hover.png') center no-repeat;
+}
+
+footer {
+    background: url('/media/pipelinelabs-pattern00-trans.png') repeat #000000;
+    margin-top: 20px;
+    min-height: 55px;
+}
+
+html {
+    background: url('/media/pipelinelabs-pattern00-trans.png') repeat #000000;
+}
+
