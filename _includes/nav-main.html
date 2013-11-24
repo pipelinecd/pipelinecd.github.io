@@ -1,5 +1,5 @@
-<header data-spy="affix" data-offset-top="204" class="navbar navbar-inverse navbar-static-top" role="banner">
-    <!--<header class="navbar navbar-inverse navbar-static-top" role="banner">-->
+<!-- <header data-spy="affix" data-offset-top="204" class="navbar navbar-inverse navbar-static-top" role="banner"> -->
+<header class="navbar navbar-inverse navbar-static-top" role="banner">
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -13,21 +13,21 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
                 <li {% if page.name == "downloads" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}/downloads">Downloads</a>
+                    <a href="https://github.com/pipelinelabs/pipeline/releases">Downloads</a>
                 </li>
                 <li {% if page.name == "userdocs" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}/userdocs">Documentation</a>
+                    <a href="https://github.com/pipelinelabs/pipeline/wiki">Documentation</a>
                 </li>
                 <li class="dropdown {% if page.name == ' getinvolved' %} active {% endif %}">
-                    <a href="{{ page.base_url }}/getinvolved" class="dropdown-toggle" data-toggle="dropdown">Get Involved <b
+                    <a href="https://github.com/pipelinelabs/pipeline/" class="dropdown-toggle" data-toggle="dropdown">Get Involved <b
                         class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ page.base_url }}/vision">Vision</a></li>
-                    <li><a href="{{ page.base_url }}/contribute">Contribute</a></li>
+                    <li><a href="https://github.com/pipelinelabs/pipeline/wiki/Vision:-Why-a-new-tool-for-Continuous-Delivery">Vision</a></li>
+                    <li><a href="https://github.com/pipelinelabs/pipeline/blob/master/CONTRIBUTING.md">Contribute</a></li>
                 </ul>
                 </li>
                 <li {% if page.name == "support" %} class="active"{% endif %}>
-                    <a href="{{ page.base_url }}/support">Help</a>
+                    <a href="http://forum.pipelinelabs.org">Help</a>
                 </li>
 
             </ul>
