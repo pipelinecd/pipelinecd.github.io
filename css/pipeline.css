@@ -31,6 +31,22 @@ a:hover {
     width: 750px;
 }
 
+#index-banner {
+    background-color: #FFCC00;
+}
+
+.yellowbg {
+    background-color: #FFCC00;
+}
+
+.whitebg {
+    background-color: #F2F2F2;
+}
+
+#index-slogan {
+    background-color: #F2F2F2;
+}
+
 .affix {
     position: fixed;
     width: 100%;
@@ -64,14 +80,6 @@ header.navbar.affix .navbar-brand {
     /*color: #fff;*/
     padding-left: 75px;
     padding-top: 15px;
-}
-
-#index-banner {
-    background-color: #FFCC00;
-}
-
-#index-slogan {
-    background-color: #F2F2F2;
 }
 
 .navbar-nav a.fa {

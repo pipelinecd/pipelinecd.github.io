@@ -5,138 +5,150 @@ name: home
 ---
 
 <div class="container-fluid">
-    <div id="index-banner" class="jumbotron">
+    <div class="jumbotron row yellowbg">
+        <div class="container">
+            <div class="col-md-6">
+                <img src="media/pipeline-yellow.png"/>
+            </div>
+            <div class="col-md-6">
+                <blockquote id="index-slogan">
+                    <p>A free, open-source continuous delivery tool that's
+                        powerful enough for the enterprise, flexible enough
+                        for startups and simple to use for hobbyists
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron row whitebg">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="media/pipeline-yellow.png"/>
-                </div>
-                <div class="col-md-6">
-                    <blockquote id="index-slogan">
-                        <p>A free, open-source continuous delivery tool that's
-                            powerful enough for the enterprise, flexible enough
-                            for startups and simple to use for hobbyists
-                        </p>
-                    </blockquote>
+                <p>
+                    5 minute intro of the high-level mission of Pipeline
+                </p>
+
+                <div class="flex-video widescreen">
+                    <iframe src="//www.youtube.com/embed/shF_v5shzjU?rel=0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <p>
-        Intro into the high-level mission of what Pipeline is trying to solve
-    </p>
+<!--<div class="container-fluid">-->
+<!--<div class="jumbotron">-->
+<!--<div class="container">-->
+<!--<p>-->
+<!--Intro into the high-level mission of what Pipeline is trying to solve-->
+<!--</p>-->
 
-    <div class="flex-video widescreen">
-        <iframe src="//www.youtube.com/embed/shF_v5shzjU?rel=0" allowfullscreen></iframe>
-    </div>
-</div>
+<!--<div class="flex-video widescreen">-->
+<!--<iframe src="//www.youtube.com/embed/shF_v5shzjU?rel=0" allowfullscreen></iframe>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
-<div class="container">
-    <article>
-        <p>
-            The hardest part of applying Continuous Delivery (CD),
-            is the organizational change required to get it fully applied
-        </p>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div class="container">
+            <article>
+                <p>A Continuous Delivery (CD) tool, which we and all stakeholders of the CD pipeline love to use.
+                    Licensed under the <a href="http://github.pipelinelabs.org/blob/master/LICENSE">MIT License</a></p>
 
-        <p>
-            In software development Continuous Integration is already
-            a standard practise, Continuous Delivery and Continuous Deployment
-            are --technically-- just the final mile
-        </p>
+                <p>Find the latest release on the <a href="http://github.pipelinelabs.org/releases">releases</a> page.
+                    And follow the <a href="http://docs.pipelinelabs.org/User-Guide%3A-Set-up-with-Central-Repository">installation</a>
+                    and <a href="http://docs.pipelinelabs.org/User-Guide%3A-Project-Pipeline-Configuration">configuration</a>
+                    documentation to get started.</p>
 
-        <p>
-            In the Delivery and Deployment phases, activities like
-            User Acceptance Testing (UAT) and arranging/configuring
-            the deployment infrastructure are often long running,
-            and therefore release blocking
-        </p>
+                <h2 id="state-of-the-project">State of the project</h2>
 
-        <p>
-            Using Pipeline, the whole software workflow from commit
-            till the consumer can use it, is handled on one place.
-            Making it seemingly clear what hold-ups the quick and
-            continuous delivery and deployment flow to the consumer
-        </p>
+                <p>This project is currently in a very early state of development. Implementing and extending on the
+                    original ideas of problems with existing tooling. Give your feedback, ideas and discuss at the <a
+                            href="http://forum.pipelinelabs.org">user/dev forum</a>.</p>
 
-        <p>
-            Hold-ups in the pipeline can then be discussed with the product owner and
-            stakeholders to be solved
-        </p>
+                <h2 id="features">Features</h2>
+                <ul>
+                    <li>From the ground-up, pipeline-based</li>
+                    <li>Pipeline configuration in pipeline domain language (DSL)</li>
+                    <li>Version controlled pipeline configuration</li>
+                    <li>Support for public and private git repositories
+                        <ul>
+                            <li>hosted on <a href="http://github.com">Github</a>, triggered via <a
+                                    href="https://help.github.com/articles/post-receive-hooks">webhook</a></li>
+                            <li>hosted on <a href="http://gitlab.org">GitLab(.org/com)</a>, triggered via [webhook] as
+                                explained on [Web hooks] help page of your GitLab installation
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-        <p>
-            Automation is key. Therefor Pipeline maintains everything
-            version-controlled. The pipeline workflow, all its external
-            dependencies, environment configuration, everything
-        </p>
+                <h2 id="roadmap">Roadmap</h2>
 
-        <p>
-            Pipeline hooks into existing tools, as long as the tool has
-            a command-line interface (CLI) or and API, it can be used
-            in Pipeline
-        </p>
+                <p>Some ideas on epics/topics we want to have implemented along the way, in no particular order:</p>
 
-        <p>
-            As the pipeline is user for the whole software workflow,
-            it has different types of users:
-        </p>
-        <dl>
-            <dt>Developers</dt>
-            <dd>who want deep insight in build and automated test phases</dd>
+                <ul>
+                    <li>Configuration service that provides generic configuration to all pipelines
+                        <ul>
+                            <li>Also supporting a secure way for sensitive configuration data</li>
+                        </ul>
+                    </li>
+                    <li>Native packages for different OS'es, for easy installation
+                        <ul>
+                            <li>Also providing scripts to run services as system daemons/services</li>
+                        </ul>
+                    </li>
+                    <li>Extensive logging and monitoring functionality</li>
+                    <li>Extend pipeline configuration with environment and execution information for simpler maintenance
+                        by
+                        not depending on specific server configurations, the pipeline takes care of everything in a
+                        versioned manner. For example:
+                        <ul>
+                            <li>Environment variables to make available to the whole pipeline, specific stages or
+                                specific
+                                commands
+                            </li>
+                            <li>System applications and versions which are required to run the pipeline are installed
+                                and
+                                configured automatically
+                            </li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                    <li>Different GUI's, for the different types of users and usages
+                        <ul>
+                            <li>All communicating with one single API against the system</li>
+                        </ul>
+                    </li>
+                    <li>Support for different authentication and authorization schemes</li>
+                </ul>
 
-            <dt>Testers</dt>
-            <dd>who want to see versions they can pull, test and sign-off after
-                all automated tests already passed
-            </dd>
+                <h2 id="building-pipeline">Building Pipeline</h2>
 
-            <dt>The business</dt>
-            <dd>wants to deploy ready versions to the consumer</dd>
+                <p>The only prerequisite is that you have JDK 7 or higher installed.</p>
 
-            <dt>And the pipeline maintainer</dt>
-            <dd>wants to maintain the pipeline, experiment and test it
-                from one single place without interrupting others
-            </dd>
-        </dl>
-        <p>
-            Different users with different requirements, therefore different
-            user interfaces (UI)
-        </p>
-    </article>
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Sponsors</h2>
+                <p>After cloning the project, type <code>./gradlew clean build</code> (Windows: <code>gradlew clean
+                    build</code>). All build dependencies,
+                    including <a href="http://www.gradle.org">Gradle</a> itself, will be downloaded automatically
+                    (unless
+                    already present).</p>
 
-            <div class="media">
-                <div class="pull-left">
-                    <a href="http://www.tricode.nl">
-                        <img src="http://www.tricode.nl/wp-content/themes/tricode/images/site/logo.png"/>
-                    </a>
+                <h2 id="contributing-to-this-project">Contributing to this project</h2>
 
-                    <div class="list-group">
-                        <a href="http://www.tricode.nl" class="list-group-item">tricode.nl</a>
-                        <a href="http://www.twitter.com/Tricode" class="list-group-item">@tricode</a>
-                    </div>
-                </div>
-                <div class="media-body">
-                    <p>
-                        <a href="http://www.tricode.nl">Tricode</a> provides time and resources.
-                        Patrick gets 8 hours of the workweek to work on Pipeline, and
-                        Martin may do design work for Pipeline during the workdays. This
-                        while having the agreement that everything created for Pipeline
-                        is Open-Source and not owned by Tricode in any way.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h2>Contributors</h2>
-            <ul>
-                <li><a href="http://www.ikoodi.nl">Patrick van Dissel</a> (Founder)</li>
-                <li><a href="http://www.andrewoberstar.com">Andrew Oberstar</a> (code)</li>
-                <li><a href="http://www.linkedin.com/in/martinkov">Martin Kovachki</a> (design)</li>
-            </ul>
+                <p>Anyone and everyone is welcome to contribute. Please take a moment to
+                    review the <a href="http://github.pipelinelabs.org/blob/master/CONTRIBUTING.md">guidelines for
+                        contributing</a>.</p>
+
+                <ul>
+                    <li><a href="http://github.pipelinelabs.org/blob/master/CONTRIBUTING.md#bugs">Bug reports</a></li>
+                    <li><a href="http://github.pipelinelabs.org/blob/master/CONTRIBUTING.md#features">Feature
+                        requests</a>
+                    </li>
+                    <li><a href="http://github.pipelinelabs.org/blob/master/CONTRIBUTING.md#pull-requests">Pull
+                        requests</a>
+                    </li>
+                </ul>
+            </article>
         </div>
     </div>
 </div>
