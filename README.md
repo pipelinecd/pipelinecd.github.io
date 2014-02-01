@@ -5,8 +5,8 @@ pipelinecd.github.io
 To develop the site:
 
 - you require:
-    - nodejs
-    - jekyll/github-pages gem
+    - nodejs (npm)
+    - jekyll ruby gem
 - to initialize the project:
     - run `npm install` from project root
 
